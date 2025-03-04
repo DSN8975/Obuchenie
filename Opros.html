@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>
+       Опрос
+    </title>
+	
+	<style>
+body {
+            background-color: blue;
+            font-family: Times New Roman;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        button {
+            background-color: green;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Опрос</h1>
+
+    <form id="form">
+        <div class="form-control">
+            <label for="name" id="label-name">ФИО</label>
+            <input type="text" id="name" placeholder="Укажи ФИО" />
+		</div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">Email</label>
+            <input type="email" id="email" placeholder="Укажи email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">Возвраст</label>
+            <input type="number" id="age" placeholder="Сколько полных лет"/>
+		</div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">Кто ты?</label>
+
+            <select name="role" id="role">
+                <option value="student">Студент</option>
+                <option value="professional">Преподаватель</option>
+                <option value="other">Другое</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>Коды операций для узоров на ткацком станке (год)</label>
+            <label for="recommed-1">
+                <input type="radio" id="false1" name="recommed">1804</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="true1" name="recommed">1837</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="false2" name="recommed">1879</input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>
+               	Коды операций для аналитической машины (год)
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="false3" name="recommed1">1804</input>
+            </label>
+            <label for="recommed-4">
+                <input type="radio" id="false4" name="recommed1">1837</input>
+            </label>
+            <label for="recommed-5">
+                <input type="radio" id="true2" name="recommed1">1879</input>
+            </label>
+        </div>
+		
+		        <div class="form-control">
+            <label>
+               		Begriffsschrift (год)
+            </label>
+            <label>
+                <input type="radio" id="true3" name="recommed2">1804</input>
+            </label>
+            <label>
+                <input type="radio" id="false5" name="recommed2">1837</input>
+            </label>
+            <label>
+                <input type="radio" id="false6" name="recommed2">1879</input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label>ЯП низкого уровня
+                <small>(Несколько ответов)</small>
+            </label>
+			
+            <label for="inp-1">
+                <input type="checkbox" name="inp">Си</input>
+              </label>
+            <label for="inp-2">
+                <input type="checkbox" name="inp">Pascal</input>
+            </label>
+            <label for="inp-3">
+                <input type="checkbox" name="inp">Машинные языки</input>
+            </label>
+            <label for="inp-4">
+                <input type="checkbox" name="inp">Ассемблер</input>
+            </label>
+            <label for="inp-5">
+                <input type="checkbox" name="inp">Java</input>
+            </label>
+            <label for="inp-6">
+                <input type="checkbox" name="inp">Basic</input>
+            </label>
+            <label for="inp-7">
+                <input type="checkbox" name="inp">Delphi</input>
+			</label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">Комментарий</label>
+
+            <textarea name="comment" id="comment" placeholder="Введи комент здесь"></textarea>
+        </div>
+		<button id="sales" type="button" onclick="Result()">Подсчитать</button>
+    </form>
+</body>
+</html>
+
+<script>
+let prav = 0;
+			
+function Result(){
+sales.innerHTML = 'Твой результат - '+prav;
+}
+
+</script>
